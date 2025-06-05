@@ -8,5 +8,8 @@ namespace Shopping.DAL.Entities
         [Required(ErrorMessage = "El campo {0} es obligatorio")] 
         [MaxLength(50, ErrorMessage = "El campo {0} debe tener maximo {1} caracteres")] //longitud maxima
         public string Name { get; set; }
+
+        [Display(Name = "Estados / Departamentos")]
+        public ICollection<State>? States { get ; set; }
     }
 }
